@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { profissional } from "../data/conteudo";
 
 function Contato() {
   const [mensagemEnviada, setMensagemEnviada] = useState(false);
@@ -9,6 +10,11 @@ function Contato() {
     evento.target.reset();
   }
 
+  // Exercício 03 — volta o estado para false e esconde a confirmação.
+  function limparMensagem() {
+    setMensagemEnviada(false);
+  }
+
   return (
     <section className="secao" id="contato">
       <div className="container contato-grid">
@@ -16,7 +22,23 @@ function Contato() {
           <p className="titulo-secao">Contato</p>
           <h2>Vamos conversar?</h2>
           <p>Preencha os campos para testar a experiência do formulário.</p>
-          <p><strong>Telefone e e-mail: [confirmar contatos profissionais]</strong></p>
+          <ul className="lista-contatos">
+            <li>
+              <strong>Telefone:</strong>{" "}
+              <a href={`tel:${profissional.telefoneLink}`}>{profissional.telefone}</a>
+            </li>
+            <li>
+              <strong>E-mail:</strong>{" "}
+              <a href={`mailto:${profissional.email}`}>{profissional.email}</a>
+            </li>
+            <li>
+              <strong>CRP:</strong> {profissional.crp}
+            </li>
+          </ul>
+          <p className="aviso-ficticio">
+            Telefone, e-mail e CRP exibidos nesta página são fictícios e possuem
+            finalidade exclusivamente didática.
+          </p>
         </div>
 
         <form className="formulario" onSubmit={enviarFormulario}>
@@ -31,9 +53,18 @@ function Contato() {
 
           <button className="botao" type="submit">Enviar solicitação</button>
           {mensagemEnviada && (
-            <p className="mensagem-sucesso">
-              Solicitação demonstrativa registrada na interface.
-            </p>
+            <div className="bloco-sucesso">
+              <p className="mensagem-sucesso">
+                Solicitação demonstrativa registrada na interface.
+              </p>
+              <button
+                className="botao botao-secundario botao-pequeno"
+                type="button"
+                onClick={limparMensagem}
+              >
+                Limpar mensagem
+              </button>
+            </div>
           )}
         </form>
       </div>

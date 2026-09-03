@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BotaoAgendamento from "./BotaoAgendamento";
 
 function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
@@ -34,9 +35,12 @@ function Header() {
           <a href="#sobre" onClick={fecharMenu}>Sobre</a>
           <a href="#servicos" onClick={fecharMenu}>Serviços</a>
           <a href="#contato" onClick={fecharMenu}>Contato</a>
-          <a className="botao botao-pequeno" href="#contato" onClick={fecharMenu}>
-            Agendar conversa
-          </a>
+          <BotaoAgendamento
+            texto="Agendar conversa"
+            destino="#contato"
+            tipo="pequeno"
+            aoClicar={fecharMenu}
+          />
         </nav>
       </div>
     </header>

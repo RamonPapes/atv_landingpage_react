@@ -1,3 +1,5 @@
+import { profissional } from "../data/conteudo";
+
 function Footer() {
   const anoAtual = new Date().getFullYear();
 
@@ -6,7 +8,7 @@ function Footer() {
       <div className="container">
         <strong>Jarsia Melo — Psicologia</strong>
         <p>Informações institucionais sujeitas à confirmação profissional.</p>
-        <p>CRP: [confirmar] | © {anoAtual} — Todos os direitos reservados.</p>
+        <p>CRP: {profissional.crp} | © {anoAtual} — Todos os direitos reservados.</p>
       </div>
     </footer>
   );

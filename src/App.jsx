@@ -5,6 +5,7 @@ import Sobre from "./components/Sobre";
 import Servicos from "./components/Servicos";
 import Beneficios from "./components/Beneficios";
 import Depoimentos from "./components/Depoimentos";
+import PerguntasFrequentes from "./components/PerguntasFrequentes";
 import Contato from "./components/Contato";
 import Footer from "./components/Footer";
 
@@ -18,6 +19,7 @@ function App() {
         <Servicos />
         <Beneficios />
         <Depoimentos />
+        <PerguntasFrequentes />
         <Contato />
       </main>
       <Footer />
