@@ -1,12 +1,43 @@
-// Dados fictícios, criados apenas para o exercício em sala.
-// Devem ser substituídos pelos dados reais confirmados antes de qualquer publicação.
+// Dados profissionais reais, conforme o perfil público da psicóloga.
 export const profissional = {
   nome: "Jarsia Melo",
-  crp: "03/12345",
-  telefone: "(71) 99999-0000",
-  telefoneLink: "+5571999990000",
-  email: "contato@example.com"
+  crp: "03/33716",
+  abordagem: "Terapia Cognitivo-Comportamental (TCC)",
+  atendimento: "On-line e presencial",
+  linkedin: "https://www.linkedin.com/in/jarsia-melo-1173a824/",
+  linkedinRotulo: "jarsia-melo-1173a824",
+  // Ainda não divulgados no perfil profissional: preencher quando forem informados.
+  telefone: "",
+  email: ""
 };
+
+// Formação acadêmica informada no perfil profissional.
+export const formacao = [
+  {
+    id: 1,
+    curso: "Graduação em Psicologia",
+    instituicao: "Instituição a confirmar",
+    periodo: ""
+  },
+  {
+    id: 2,
+    curso: "Mestrado Profissional em Educação de Jovens e Adultos (MPEJA)",
+    instituicao: "Universidade do Estado da Bahia",
+    periodo: "2016 – 2018"
+  },
+  {
+    id: 3,
+    curso: "Especialização em Engenharia Sanitária e Meio Ambiente — Habitação Saudável",
+    instituicao: "Fiocruz — Rio de Janeiro",
+    periodo: "2003 – 2005"
+  },
+  {
+    id: 4,
+    curso: "Licenciatura Plena em Ciências Biológicas — Ecotoxicologia",
+    instituicao: "Universidade Católica do Salvador",
+    periodo: "1997 – 2003"
+  }
+];
 
 export const servicos = [
   {
@@ -14,7 +45,7 @@ export const servicos = [
     icone: "◌",
     titulo: "Psicoterapia individual",
     descricao: "Espaço individual para escuta e reflexão.",
-    modalidade: "Modalidade a confirmar",
+    modalidade: "On-line e presencial",
     disponivel: true
   },
   {
@@ -22,7 +53,7 @@ export const servicos = [
     icone: "⌁",
     titulo: "Atendimento on-line",
     descricao: "Possibilidade de atendimento por videochamada.",
-    modalidade: "Modalidade a confirmar",
+    modalidade: "On-line",
     disponivel: true
   },
   {
@@ -30,7 +61,7 @@ export const servicos = [
     icone: "◇",
     titulo: "Acolhimento psicológico",
     descricao: "Momento inicial de conversa e orientação.",
-    modalidade: "Modalidade a confirmar",
+    modalidade: "On-line e presencial",
     disponivel: false
   },
   {
@@ -38,7 +69,7 @@ export const servicos = [
     icone: "◈",
     titulo: "Orientação Psicológica",
     descricao: "Conversa orientada sobre dúvidas, escolhas e organização da rotina.",
-    modalidade: "Modalidade a confirmar",
+    modalidade: "On-line e presencial",
     disponivel: false
   }
 ];

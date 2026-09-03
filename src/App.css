@@ -24,6 +24,7 @@ section[id] { scroll-margin-top: 88px; }
 .botao-pequeno { padding: 9px 12px; }
 .hero { background: var(--creme); padding: 78px 0; }
 .hero-grid, .sobre-grid, .contato-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 44px; align-items: center; }
+.sobre-grid { align-items: start; }
 .hero h1 { font-size: clamp(2.2rem, 5vw, 4.3rem); line-height: 1.05; color: var(--verde-escuro); margin: 13px 0; }
 .hero p { line-height: 1.7; font-size: 1.1rem; }
 .etiqueta, .titulo-secao { color: var(--terracota); font-weight: 700; letter-spacing: .09em; text-transform: uppercase; font-size: .75rem; }
@@ -43,7 +44,13 @@ section[id] { scroll-margin-top: 88px; }
 .situacao-consulta { background: #FFF0EA; color: #8A4A36; }
 .beneficio span { color: var(--terracota); font-weight: 700; font-size: 1.4rem; }
 blockquote { margin: 0; line-height: 1.7; border-left: 4px solid var(--terracota); }
-.aviso-ficticio { padding: 12px; background: #FFF0EA; border-radius: 8px; }
+.aviso-ficticio, .aviso { padding: 12px; background: #FFF0EA; border-radius: 8px; }
+.subtitulo { margin: 26px 0 10px; color: var(--verde-escuro); font-size: 1.05rem; }
+.registro { margin-top: 14px; color: var(--verde); }
+.lista-formacao { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.lista-formacao li { padding-left: 15px; border-left: 3px solid var(--verde-claro); }
+.lista-formacao strong { display: block; color: var(--verde-escuro); font-size: .95rem; }
+.lista-formacao span { font-size: .85rem; color: #5A6B64; }
 .lista-contatos { list-style: none; margin: 16px 0; padding: 0; display: grid; gap: 6px; }
 .lista-contatos a { color: var(--verde); font-weight: 700; }
 .formulario { display: grid; gap: 8px; }

@@ -1,4 +1,4 @@
-import { profissional } from "../data/conteudo";
+import { formacao, profissional } from "../data/conteudo";
 
 function Sobre() {
   return (
@@ -6,10 +6,31 @@ function Sobre() {
       <div className="container sobre-grid">
         <div>
           <p className="titulo-secao">Sobre</p>
-          <h2>Psicóloga Jarsia Melo</h2>
-          <p>A proposta desta homepage é apresentar um espaço de escuta, acolhimento e reflexão, respeitando a singularidade de cada pessoa.</p>
-          <p><strong>CRP: {profissional.crp}</strong></p>
+          <h2>Psicóloga {profissional.nome}</h2>
+          <p>
+            Atuação em psicologia clínica pela abordagem da {profissional.abordagem},
+            com atendimento {profissional.atendimento.toLowerCase()}. Bióloga por
+            formação, é mestre em Educação de Jovens e Adultos e soma experiência
+            como consultora e docente.
+          </p>
+          <p className="registro">
+            <strong>CRP {profissional.crp}</strong>
+          </p>
+
+          <h3 className="subtitulo">Formação acadêmica</h3>
+          <ul className="lista-formacao">
+            {formacao.map((item) => (
+              <li key={item.id}>
+                <strong>{item.curso}</strong>
+                <span>
+                  {item.instituicao}
+                  {item.periodo && ` · ${item.periodo}`}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
+
         <aside className="quadro-compromissos">
           <h3>Compromissos do atendimento</h3>
           <ul>

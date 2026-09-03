@@ -7,7 +7,7 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         <strong>Jarsia Melo — Psicologia</strong>
-        <p>Informações institucionais sujeitas à confirmação profissional.</p>
+        <p>Conteúdo informativo. Não substitui avaliação psicológica.</p>
         <p>CRP: {profissional.crp} | © {anoAtual} — Todos os direitos reservados.</p>
       </div>
     </footer>

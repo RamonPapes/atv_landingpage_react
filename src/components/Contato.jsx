@@ -23,22 +23,39 @@ function Contato() {
           <h2>Vamos conversar?</h2>
           <p>Preencha os campos para testar a experiência do formulário.</p>
           <ul className="lista-contatos">
+            {profissional.telefone && (
+              <li>
+                <strong>Telefone:</strong>{" "}
+                <a href={`tel:${profissional.telefone.replace(/\D/g, "")}`}>
+                  {profissional.telefone}
+                </a>
+              </li>
+            )}
+            {profissional.email && (
+              <li>
+                <strong>E-mail:</strong>{" "}
+                <a href={`mailto:${profissional.email}`}>{profissional.email}</a>
+              </li>
+            )}
             <li>
-              <strong>Telefone:</strong>{" "}
-              <a href={`tel:${profissional.telefoneLink}`}>{profissional.telefone}</a>
-            </li>
-            <li>
-              <strong>E-mail:</strong>{" "}
-              <a href={`mailto:${profissional.email}`}>{profissional.email}</a>
+              <strong>LinkedIn:</strong>{" "}
+              <a href={profissional.linkedin} target="_blank" rel="noreferrer">
+                {profissional.linkedinRotulo}
+              </a>
             </li>
             <li>
               <strong>CRP:</strong> {profissional.crp}
             </li>
+            <li>
+              <strong>Atendimento:</strong> {profissional.atendimento}
+            </li>
           </ul>
-          <p className="aviso-ficticio">
-            Telefone, e-mail e CRP exibidos nesta página são fictícios e possuem
-            finalidade exclusivamente didática.
-          </p>
+          {(!profissional.telefone || !profissional.email) && (
+            <p className="aviso">
+              Telefone e e-mail profissionais ainda não foram divulgados. Até lá, o
+              formulário e o LinkedIn são os canais indicados para o primeiro contato.
+            </p>
+          )}
         </div>
 
         <form className="formulario" onSubmit={enviarFormulario}>
